@@ -1,0 +1,238 @@
+body {
+  font-family: "Arial", sans-serif;
+  color: gray;
+}
+
+.dashboard-widget_box {
+  box-sizing: border-box;
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  border: 2px solid gray;
+  border-radius: 20px;
+}
+
+/* Widget header --------------------------------*/
+.chat-widget_header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 5px 20px;
+  
+  color: white;
+  font-size: 14px;
+  font-style: italic;
+  background-color: blue;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+
+  cursor: move;
+}
+
+.chat-widget_header_title {
+  margin: 0;
+
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.dots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 50px;
+}
+
+.dot {
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+
+  border: 1px solid gray;
+  border-radius: 50%;
+
+  background-image: radial-gradient(red, gray);
+}
+
+.dot-2 {
+  background-image: radial-gradient(yellow, gray);
+}
+
+.dot-3 {
+  background-image: radial-gradient(green, gray);
+}
+
+/* Widgets box ------------------------------------*/
+.dash-widgets_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.widget {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  min-height: 200px;
+  padding: 10px 15px;
+
+  border:2px solid gray;
+  border-radius: 20px;
+}
+
+.widget:first-of-type {
+  margin-right: 20px;
+}
+
+.widget-title {
+  margin-bottom: 10px;
+}
+
+.widget_tasks-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.instance-task_box {
+  width: 100%;
+  padding: 5px;
+
+  box-sizing: border-box;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+
+.instance-task_box:not(:last-of-type),
+.worklog-task_box:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.instance-task-header,
+.instance-task-status,
+.worklog-task-header {
+  margin-bottom: 5px;
+}
+
+.instance-task-status,
+.instance-task-actions {
+  display: flex;
+  align-items: center;
+}
+
+.instance-task-status_title,
+.instance-task-actions_title {
+  width: 70px;
+}
+
+.instance-task-status_circle {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+[data-state="stopped"] .instance-task-status_circle {
+  background-color: red;
+}
+
+[data-state="running"] .instance-task-status_circle {
+  background-color: green;
+}
+
+.instance-task-actions_switch,
+.instance-task-actions_delete {
+  width: 18px;
+  height: 18px;
+
+  background-image: url('../img/sprite-btns.png');
+  background-repeat: no-repeat;
+  background-size: 70px;
+
+  cursor: pointer;
+}
+
+.instance-task-actions_switch {
+  margin-right: 10px;
+}
+
+.instance-task-actions_switch.stopped {
+  background-position: 0 center;
+}
+
+.instance-task-actions_switch.running {
+  background-position: -24px center;
+}
+
+.instance-task-actions_delete {
+  background-position: -53px center;
+}
+
+.instance-task-status_text {
+  color: black;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.worklog-task_box {
+  width: 100%;
+  border-bottom: 1px dashed lightblue;
+  font-size: 12px;
+}
+
+.inctance-empty-box-content,
+.worklog-empty-box-content {
+  align-self: center;
+}
+
+.instance-footer {
+  margin-top: 10px;
+  text-decoration: underline;
+  align-self: center;
+
+  cursor: pointer;
+}
+
+/* Connection box--------------------------------------------------*/
+.connection-status-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 35px;
+  margin-top: 10px;
+
+  color: white;
+  background-color: blue;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.connection-status-box_sign {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid gray;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.disconnected {
+  background-color: red;
+}
+
+/* Common styles --------------------------*/
+
+.hidden {
+  display: none;
+}
